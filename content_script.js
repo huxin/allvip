@@ -39,8 +39,8 @@ chrome.runtime.onMessage.addListener(
     switch (command) {
       case "fill":
           console.log("do fill Change institution to " + inst)
-          document.getElementById('queryBox').value = inst
-          document.getElementById('searchButton').click()
+          document.getElementById('txtMainSearchType').value = inst
+          document.getElementById('btnMainSearchType').click()
           break // fill
 
       case "goto":
@@ -71,7 +71,7 @@ var getCurPageFunc = function () {
 var gotoPageFunc = function(page_no) {
   var pg_num_as =  $('.page-num a')
   if (pg_num_as.length == 0) {
-    prompt("Cannot find page number element to jump to: " + page_no)
+    console.log("Cannot find page number element to jump to: " + page_no)
   }
   console.log("goto page: " + page_no)
   pg_num_as[0].href = "javascript:void(g_GetGotoPage('" + page_no + "'))"

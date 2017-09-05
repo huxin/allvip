@@ -15,7 +15,8 @@
  },
  "content_scripts": [ {
    "matches": ["http://*/*", "https://*/*"],
-   "js": ["jquery.js", "arrive.min.js", "content_script.js"]
+   "js": ["jquery.js", "arrive.min.js", "content_script.js"],
+   "all_frames": true
   }
  ],
   "permissions": [
